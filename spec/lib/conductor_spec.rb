@@ -6,8 +6,8 @@ describe Conductor do
 
   context 'properties' do
 
-    it 'should have a trains array' do
-      subject.trains.should be_kind_of(Array)
+    it 'should have a places array' do
+      subject.places.should be_kind_of(Array)
     end
 
     it 'should have a routes array' do

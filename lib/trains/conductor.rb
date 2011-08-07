@@ -1,9 +1,9 @@
 class Conductor
 
-  attr_reader :trains, :routes
+  attr_reader :places, :routes
 
   def initialize
-    @trains = []
+    @places = []
     @routes = []
   end
 
