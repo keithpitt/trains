@@ -2,6 +2,14 @@ require 'spec_helper'
 
 describe Train do
 
-  pending 'should do something'
+  subject { Train.new }
+
+  context 'properties' do
+
+    it 'should have a name' do
+      subject.should respond_to(:name)
+    end
+
+  end
 
 end
