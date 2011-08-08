@@ -11,7 +11,7 @@ problem in C++ before which can be seen on my GitHub page:
 https://github.com/keithpitt/airport-best-path
 
 After further looking into the problem, I realised that it wasn't so
-easy as the normal algorithims used to solve the "Travelling Salesman"
+easy as using the normal algorithims used to solve the "Travelling Salesman"
 problem. Paths are not mutual, and nor do they have the same weighting.
 
 I have satisfied all the criteria supplied. My test suite sets up a
