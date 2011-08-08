@@ -23,6 +23,12 @@ class Conductor
     distance
   end
 
+  def shorted_path_between(origin, destination)
+    paths = paths_between(origin, destination, :maximum_stops => routes.length)
+
+    paths.sort { |x,y| y.distance <=> x.distance }.last
+  end
+
   def paths_between(origin, destination, rules = {})
 
     if rules.has_key?(:maximum_stops)
@@ -63,12 +69,6 @@ class Conductor
 
     end
 
-  end
-
-  def shorted_path_between(origin, destination)
-    paths = paths_between(origin, destination, :maximum_stops => routes.length)
-
-    paths.sort { |x,y| y.distance <=> x.distance }.last
   end
 
   private
