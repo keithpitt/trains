@@ -1,4 +1,5 @@
 # Trains
+
 I found the trains problem to be the most interesting of the 3 problems
 given to me to solve. I believe the other 2 would be much easier, so I
 decided to go with the hardest.
@@ -23,5 +24,12 @@ To run the test suite, simply run:
 
 ## Tools Used
 
+* Ruby 1.9.2-p290
 * RSpec
 * Rake
+* Bundler
+* RVM
+
+## References
+
+* http://en.wikipedia.org/wiki/Travelling_salesman_problem
