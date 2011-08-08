@@ -20,7 +20,9 @@ ensure that my code works as described.
 
 To run the test suite, simply run:
 
-    rake spec
+    bundle && bundle exec rake
+
+This will install the dependencies using bundler and run the test suite.
 
 ## Tools Used
 
