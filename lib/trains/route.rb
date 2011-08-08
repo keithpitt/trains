@@ -8,4 +8,8 @@ class Route
     @distance = attrs[:distance]
   end
 
+  def to_s
+    "#{@origin.name}#{@destination.name}#{@distance}"
+  end
+
 end

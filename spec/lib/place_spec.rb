@@ -4,12 +4,8 @@ describe Place do
 
   subject { Place.new }
 
-  context 'properties' do
-
-    it 'should have a name' do
-      subject.should respond_to(:name)
-    end
-
+  it 'should have a name' do
+    subject.should respond_to(:name)
   end
 
   context '#initialization' do
