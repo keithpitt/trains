@@ -112,4 +112,20 @@ describe Conductor do
 
   end
 
+  describe '#shorted_path_between' do
+
+    it 'should find the shortest path between two places' do
+      # TW: Question 8
+      path_1 = subject.shorted_path_between(a, c)
+      path_1.to_s.should == 'A-B-C'
+      path_1.distance.should == 9
+
+      # TW: Question 9
+      path_2 = subject.shorted_path_between(b, b)
+      path_2.to_s.should == 'B-C-E-B'
+      path_2.distance.should == 9
+    end
+
+  end
+
 end

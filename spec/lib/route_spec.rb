@@ -4,6 +4,9 @@ describe Route do
 
   subject { Route.new }
 
+  let(:origin) { Place.new(:name => "A") }
+  let(:destination) { Place.new(:name => "B") }
+
   it 'should have an origin' do
     subject.should respond_to(:origin)
   end
@@ -16,10 +19,7 @@ describe Route do
     subject.should respond_to(:distance)
   end
 
-  context '#initialization' do
-
-    let(:origin) { Place.new(:name => "A") }
-    let(:destination) { Place.new(:name => "B") }
+  describe '#initialize' do
 
     it 'should set the origin of the route' do
       route = Route.new(:origin => origin)
@@ -45,6 +45,16 @@ describe Route do
       route.destination.should == destination
       route.origin.should == origin
       route.distance.should == 6
+    end
+
+  end
+
+  describe '#to_s' do
+
+    it 'should return the origin and the origin, destination and the distance' do
+      route = Route.new(:destination => destination, :origin => origin, :distance => 6)
+
+      route.to_s.should == "AB6"
     end
 
   end

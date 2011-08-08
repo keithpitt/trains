@@ -65,6 +65,12 @@ class Conductor
 
   end
 
+  def shorted_path_between(origin, destination)
+    paths = paths_between(origin, destination, :maximum_stops => routes.length)
+
+    paths.sort { |x,y| y.distance <=> x.distance }.last
+  end
+
   private
 
     # The block is called each with current path as it traverses through
