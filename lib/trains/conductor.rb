@@ -75,7 +75,6 @@ class Conductor
 
     # The block is called each with current path as it traverses through
     # the route graph. The block can return either :stop, :continue or :match
-    #
     def traverse_route_map(origin, destination, path, matches, &block)
       route_map[origin].each do |route|
 
